@@ -1,0 +1,319 @@
+@import "tailwindcss";
+@import "remixicon/fonts/remixicon.css";
+
+:root {
+  --background: #f5f7fb;
+  --foreground: #0f172a;
+
+}
+
+.dark {
+  --background: #020617;
+  --foreground: #f8fafc;
+
+
+  .bg-main {
+    background: linear-gradient(135deg, rgb(7, 7, 37) 0%, rgb(34, 36, 37) 50%, rgb(24, 30, 34) 100%);
+  }
+
+  /* Optional gradient tweak */
+  --gradient-start: #2563eb;
+  --gradient-end: #9333ea;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Glossy table row styles */
+.glossy-table tbody tr {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+  transition: background 0.15s ease;
+}
+
+.glossy-table tbody tr:hover {
+  background: rgba(37, 99, 235, 0.03);
+}
+
+.glossy-table td {
+  padding: 14px 24px;
+  font-size: 13px;
+  color: #334155;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.7);
+}
+
+body {
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.scrollbar-hidden {
+  scrollbar-width: none;
+}
+
+.h1 {
+  @apply capitalize tracking-wide text-[#000000] font-bold text-[1.1rem] md:text-[1.3rem] lg:text-[1.5rem];
+}
+
+.h2 {
+  @apply tracking-wide text-[#2d2d2d] font-semibold text-[1rem] md:text-[1.2rem] lg:text-[1.3rem];
+}
+
+.h3 {
+  @apply leading-4 md:leading-6 text-[#2d2d2d] font-bold text-[0.83rem] md:text-[0.95rem] lg:text-[1.1rem];
+}
+
+.h4 {
+  @apply leading-4 md:leading-6 text-[#2d2d2d] font-semibold text-[0.80rem] md:text-[0.92rem] lg:text-[1rem];
+}
+
+.h5 {
+  @apply leading-4 md:leading-6 text-[#2d2d2d] font-medium text-[0.78rem] md:text-[0.8rem] lg:text-[0.85rem];
+}
+
+.p {
+  @apply leading-4 md:leading-5 text-gray-700 text-[0.8rem] md:text-[0.85rem] lg:text-[0.88rem] font-medium;
+}
+
+.p2 {
+  @apply leading-4 md:leading-5 text-[#666666] text-[0.8rem] md:text-[0.83rem] lg:text-[0.85rem] font-normal;
+}
+
+.span {
+  @apply tracking-wide text-gray-700 text-[0.65rem] md:text-[0.7rem] lg:text-[0.8rem];
+}
+
+.desc {
+  @apply tracking-wide text-gray-700 text-[0.75rem] md:text-[0.85rem] lg:text-[0.9rem];
+}
+
+.content {
+  @apply tracking-wide text-gray-700 text-[0.8rem] md:text-[0.9rem] lg:text-[0.96rem];
+}
+
+.shadow {
+  @apply shadow-[0px_4px_4px_0px_#00000040];
+}
+
+.gradient {
+  background: linear-gradient(135deg, rgb(37, 99, 235) 0%, rgb(124, 58, 237) 100%);
+}
+
+.gradient2 {
+  background: linear-gradient(135deg, rgb(100, 116, 139) 0%, rgb(148, 163, 184) 100%);
+}
+
+.btn-gradient {
+  background: linear-gradient(135deg, rgb(37, 99, 235), rgb(124, 58, 237));
+  box-shadow: rgba(37, 99, 235, 0.3) 0px 4px 12px;
+}
+
+
+
+.win-rate {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.05));
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.max-dd {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.05));
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.risk-reward {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(29, 78, 216, 0.05));
+  border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.sharpe {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(109, 40, 217, 0.05));
+  border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.cart-text1 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cart-text {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.strategy-card {
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.bg-main {
+  background: linear-gradient(135deg, rgb(240, 244, 255) 0%, rgb(248, 250, 252) 50%, rgb(240, 249, 255) 100%);
+}
+
+.average-card {
+  background: rgba(248, 250, 252, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.bg-header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 20px;
+}
+
+.sidebar-gradient {
+  background: linear-gradient(135deg, rgb(37, 99, 235) 0%, rgb(124, 58, 237) 100%);
+  background: linear-gradient(160deg, rgba(30, 59, 138, 0.918) 0%, rgba(29, 79, 216, 0.952) 40%, rgb(37, 99, 235) 70%, rgb(59, 130, 246) 100%);
+}
+
+.circle {
+  background: radial-gradient(circle, rgb(96, 165, 250), transparent);
+  transform: translate(-30%, 0px);
+}
+
+.logo {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.19), rgba(255, 255, 255, 0.082));
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.logout {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.logout-bg {
+  background: linear-gradient(135deg, rgb(245, 158, 11), rgb(239, 68, 68));
+}
+
+.s-card {
+  background: rgba(248, 250, 252, 0.8);
+  border: 2px solid rgba(148, 163, 184, 0.2);
+
+}
+
+.s-card-active {
+  background: rgba(37, 99, 235, 0.08);
+  border: 2px solid rgba(37, 99, 235, 0.4);
+}
+
+.back-border {
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.create-s-border {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 4px 24px;
+}
+
+.remove-btn {
+  background: linear-gradient(135deg, rgb(239, 68, 68), rgb(220, 38, 38));
+}
+
+.buy-btn {
+  background: linear-gradient(135deg, rgb(31, 41, 55), rgb(17, 24, 39));
+}
+
+.sell-btn {
+  background: linear-gradient(135deg, rgb(107, 114, 128), rgb(75, 85, 99));
+}
+
+.expired {
+  background: linear-gradient(135deg, rgb(30, 41, 59), rgb(51, 65, 85));
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px;
+}
+
+.brown-btn {
+  background: linear-gradient(135deg, rgb(30, 41, 59), rgb(51, 65, 85));
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.badge {
+  background: rgba(16, 185, 129, 0.12);
+  color: rgb(5, 150, 105);
+}
+
+.badge-border {
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.d-icon-bg {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.average-card {
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 10px;
+}
+
+.d-overlay-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(0, 0, 0, 0.05) 100%);
+}
+
+.d-user-card {
+  background: linear-gradient(135deg, rgb(37, 99, 235) 0%, rgb(29, 78, 216) 100%);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 24px;
+}
+
+.d-customer-card {
+  background: linear-gradient(135deg, rgba(37, 100, 235, 0.842) 0%, rgba(29, 79, 216, 0.856) 100%);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 24px;
+}
+
+.d-wallet-card {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.897) 0%, rgba(108, 40, 217, 0.918) 100%);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 24px;
+}
+
+.d-runing-card {
+  background: linear-gradient(135deg, rgba(20, 171, 209, 0.959) 0%, rgba(14, 116, 144, 0.966) 100%);
+  box-shadow: rgba(0, 0, 0, 0.13) 0px 4px 24px;
+}
+
+.d-trades-card {
+  background: linear-gradient(135deg, rgba(5, 150, 104, 0.918) 0%, rgba(4, 120, 87, 0.87) 100%);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 24px;
+}
+
+.d2-card-bg {
+  background: rgba(16, 185, 129, 0.1);
+  font-size: 11px;
+  color: rgb(16, 185, 129);
+}
+
+.basic-trader {
+  background: linear-gradient(135deg, rgb(37, 99, 235) 0%, rgb(29, 78, 216) 100%);
+}
+
+.pro-trader {
+  background: linear-gradient(135deg, rgb(124, 58, 237) 0%, rgb(109, 40, 217) 100%);
+}
+
+.elite-trader {
+  background: linear-gradient(135deg, rgb(8, 145, 178) 0%, rgb(14, 116, 144) 100%);
+}
